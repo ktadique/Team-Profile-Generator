@@ -1,0 +1,28 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A team profile generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktadique/Team-Profile-Generator.git"
+  },
+  "author": "Kirsten Tadique",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ktadique/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/ktadique/Team-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  },
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  }
+}
