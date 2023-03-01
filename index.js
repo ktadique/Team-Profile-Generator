@@ -89,6 +89,41 @@ function addEngineer() {
 }
 
 //function to prompt user for intern information
+function addIntern() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "Please enter the intern's name:",
+        name: "internName",
+      },
+      {
+        type: "input",
+        message: "Please enter the intern's ID number:",
+        name: "internId",
+      },
+      {
+        type: "input",
+        message: "Please enter the intern's email:",
+        name: "internEmail",
+      },
+      {
+        type: "input",
+        message: "Please enter the intern's school:",
+        name: "internSchool",
+      },
+    ])
+    .then((response) => {
+      const intern = new Intern(
+        response.internName,
+        response.internId,
+        response.internEmail,
+        response.internSchool
+      );
+      employeeTeam.push(intern);
+      nextEmployee();
+    });
+}
 
 //function to prompt user for next employee
 function nextEmployee() {
@@ -118,4 +153,5 @@ function nextEmployee() {
     });
 }
 
+//function to render HTML page using user input
 function renderTeamPage() {}
