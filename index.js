@@ -91,3 +91,31 @@ function addEngineer() {
 //function to prompt user for intern information
 
 //function to prompt user for next employee
+function nextEmployee() {
+  inquirer
+    .prompt([
+      {
+        type: "List",
+        message: "Which team member would you like to add next?",
+        choices: ["Engineer", "Intern", "Finished building the team"],
+        name: "nextEmployee",
+      },
+    ])
+    .then((response) => {
+      switch (nextEmployee.response) {
+        case "Engineer":
+          addEngineer();
+          break;
+        case "Intern":
+          addIntern();
+          break;
+        case "Finished building the team":
+          renderTeamPage();
+          break;
+        default:
+          console.log("You must select an option!");
+      }
+    });
+}
+
+function renderTeamPage() {}
