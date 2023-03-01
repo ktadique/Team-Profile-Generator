@@ -14,6 +14,7 @@ const render = require("./src/page-template.js");
 
 const employeeTeam = [];
 
+//function to prompt user for manager information
 function initManager() {
   inquirer
     .prompt([
@@ -48,3 +49,45 @@ function initManager() {
       employeeTeam.push(manager);
     });
 }
+
+//function to prompt user for engineer information
+
+function addEngineer() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        message: "Please enter the engineer's name:",
+        name: "engineerName",
+      },
+      {
+        type: "input",
+        message: "Please enter the engineer's ID number:",
+        name: "engineerId",
+      },
+      {
+        type: "input",
+        message: "Please enter the engineer's email:",
+        name: "engineerEmail",
+      },
+      {
+        type: "input",
+        message: "Please enter the engineer's GitHub username:",
+        name: "engineerGitHub",
+      },
+    ])
+    .then((response) => {
+      const engineer = new Engineer(
+        response.engineerName,
+        response.engineerId,
+        response.engineerEmail,
+        response.engineerGitHub
+      );
+      employeeTeam.push(engineer);
+      nextEmployee();
+    });
+}
+
+//function to prompt user for intern information
+
+//function to prompt user for next employee
