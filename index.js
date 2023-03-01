@@ -154,4 +154,11 @@ function nextEmployee() {
 }
 
 //function to render HTML page using user input
-function renderTeamPage() {}
+function renderTeamPage() {
+  fs.writeFile(outputPath, render(employeeTeam), (err) =>
+    err ? console.log(err) : console.log("Page successfully created!")
+  );
+}
+
+//initialize prompts
+initManager();
