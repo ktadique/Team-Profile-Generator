@@ -47,6 +47,7 @@ function initManager() {
         response.managerOffice
       );
       employeeTeam.push(manager);
+      nextEmployee();
     });
 }
 
@@ -130,14 +131,14 @@ function nextEmployee() {
   inquirer
     .prompt([
       {
-        type: "List",
+        type: "list",
         message: "Which team member would you like to add next?",
         choices: ["Engineer", "Intern", "Finished building the team"],
         name: "nextEmployee",
       },
     ])
     .then((response) => {
-      switch (nextEmployee.response) {
+      switch (response.nextEmployee) {
         case "Engineer":
           addEngineer();
           break;
