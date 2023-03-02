@@ -1,0 +1,25 @@
+h1 {
+  font-size: 96px;
+}
+
+.team-heading {
+  background-color: #212529;
+  color: white;
+  font-weight: bold;
+}
+
+.team-area {
+  max-width: 1200px !important;
+}
+
+.card {
+  width: 500px !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 25px;
+}
+
+.card-header {
+  height: 150px;
+  background-color: #0b7285;
+  color: white;
+}
