@@ -3,13 +3,13 @@ h1 {
 }
 
 .team-heading {
-  background-color: #212529;
+  background-color: #0b7285;
   color: white;
   font-weight: bold;
 }
 
 .team-area {
-  max-width: 1200px !important;
+  max-width: 1200px;
 }
 
 .card {
@@ -20,6 +20,6 @@ h1 {
 
 .card-header {
   height: 150px;
-  background-color: #0b7285;
+  background-color: #e67700;
   color: white;
 }
